@@ -1,7 +1,7 @@
 import numpy, pickle, os, hashlib
-
 # import bits from pyatomdb.
-from pyatomdb import apec, util, const, atomdb, pyfits, spectrum
+from pyatomdb import apec, util, const, atomdb, spectrum
+from astropy.io import fits as pyfits
 
 """
 This modules is designed to generate kappa specta.

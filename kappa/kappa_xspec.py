@@ -1,4 +1,4 @@
-import kappa
+from kappa import kappa
 import numpy
 import xspec
 import pyatomdb
@@ -129,10 +129,10 @@ def pykappa(engs, params, flux):
   k = float(params[1])
 
   # correct abundance set if required
-  if kappamodelobject.abund_xspectoatomdb[xspec.Xset.abund] != \
+  abund_str = xspec.Xset.abund.split(":")[0]
+  if kappamodelobject.abund_xspectoatomdb[abund_str] != \
      kappamodelobject.abundset:
-    kappamodelobject.set_abundset(kappamodelobject.abund_xspectoatomdb[
-     xspec.Xset.abund])
+    kappamodelobject.set_abundset(kappamodelobject.abund_xspectoatomdb[abund_str])
 
   # set the abundance
 
