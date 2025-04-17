@@ -115,7 +115,8 @@ def pykappa(engs, params, flux):
   elarray = kappamodelobject.elements
   abund = numpy.zeros(len(elarray))
 
-  
+
+
   if len(params)==5:
     # kappa case
     elarray=[2,6,7,8,10,12,13,14,16,18,20,26,28]
@@ -133,7 +134,8 @@ def pykappa(engs, params, flux):
 
   T = float(params[0])
   k = float(params[1])
-  Velocity = float(params[-1])
+  Velocity = float(params[-2])
+  # params[-1] is the norm
 
   kappamodelobject.velocity_broadening = Velocity
 
